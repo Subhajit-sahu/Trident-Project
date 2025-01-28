@@ -18,15 +18,15 @@ hamburger.addEventListener('click', () => {
 });
 
 // Form Submission (Fake Example)
-document.querySelector('form').addEventListener('submit', function (e) {
-    e.preventDefault();
+// document.querySelector('form').addEventListener('submit', function (e) {
+//     e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+//     const name = document.getElementById('name').value;
+//     const email = document.getElementById('email').value;
+//     const message = document.getElementById('message').value;
 
-    alert(`Thank you, ${name}! Your message has been received.`);
+//     alert(`Thank you, ${name}! Your message has been received.`);
 
-    // Clear the form fields
-    this.reset();
-});
+//     // Clear the form fields
+//     this.reset();
+// });
