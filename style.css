@@ -26,6 +26,48 @@ body {
     z-index: 10;
 }
 
+/* Meta-Style Rotating Element */
+#meta-style-rotating-element {
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent; /* Base border */
+    border-top: 5px solid #fff; /* Initial visible color */
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite, colorChange 2s linear infinite;
+  }
+  
+  /* Rotate Animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Color Changing Animation */
+  @keyframes colorChange {
+    0% {
+      border-top-color: rgb(255, 255, 255); /* White */
+    }
+    25% {
+      border-top-color: rgb(255, 69, 0); /* OrangeRed */
+    }
+    50% {
+      border-top-color: rgb(50, 205, 50); /* LimeGreen */
+    }
+    75% {
+      border-top-color: rgb(255, 255, 0); /* Yellow */
+    }
+    100% {
+      border-top-color: rgb(255, 255, 255); /* Back to White */
+    }
+  }
+
+  
+  
+
 /* Navbar Styling */
 .navbar {
     display: flex;
@@ -67,7 +109,7 @@ body {
     border-radius: 5px;
     white-space: nowrap;
     transition: background 0.3s ease;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .cta-button:hover {
@@ -121,8 +163,76 @@ body {
     }
 
     #buy-button {
-        margin-left: 180px;
+        margin-left: 250px;
     }
+
+    #meta-style-rotating-element {
+        margin-right: 160px;
+    }
+}
+
+/* Image Mover */
+.image-slider{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 10px 0px;
+}
+
+.image-mover {
+    height: 420px;
+    width: 420px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+
+.img-container{
+    display: flex;
+    /* transform: translateX(-500px); */
+    transition: transform .4s ease-in-out;
+    object-fit: cover;
+}
+
+.img-container img{
+    height: 420px;
+    width: 420px;
+}
+
+.img-container .img1{
+    background-color: #000;
+}
+
+.img-container .img2{
+    background-color: red;
+}
+
+.btn{
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    opacity: 0.8;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.prev{
+    left: 15px;
+}
+
+.next{
+    right: 15px;
 }
 
 
@@ -242,7 +352,7 @@ form textarea {
     border: 1px solid #ffd700;
     border-radius: 8px;
     background-color: #fff;
-    color: #f8f5f2;
+    color: #5C4033;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -386,6 +496,7 @@ form button:hover {
 
     .hero p {
         font-size: 1rem; /* Adjust paragraph size */
+        padding: 6px;
     }
 
     .hamburger {
