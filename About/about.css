@@ -1,0 +1,88 @@
+/* about.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background for a sleek look */
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* Main container */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* About content */
+.about-content {
+    max-width: 700px;
+    background: linear-gradient(135deg, #1e1e1e, #292929); /* Dark gradient */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(255, 165, 0, 0.2); /* Orange glow */
+    transform: scale(0.9);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.about-content:hover {
+    transform: scale(1);
+    box-shadow: 0px 15px 35px rgba(255, 165, 0, 0.3); /* Stronger glow on hover */
+}
+
+/* About image */
+.about-image {
+    margin-top: 30px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(255, 165, 0, 0.3); /* Matching shadow */
+    transition: transform 0.5s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .about-content {
+        text-align: left;
+    }
+}
