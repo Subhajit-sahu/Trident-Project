@@ -103,8 +103,8 @@ body {
 
 /* CTA Button */
 #buy-button {
-    background: #20C997;
-    color: #fff;
+    background-color: #007BFF; /* Professional blue */
+    color: #FFFFFF; /* White text */  
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
