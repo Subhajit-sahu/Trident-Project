@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Vehicle</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Order Our Product</h1>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms API Key -->
+            <input type="hidden" name="access_key" value="23636706-6cee-4539-9b94-1c0db7fcaf3d" />
+
+            <!-- Personal Information -->
+            <h2>Buyer Information</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="Your phone number" required>
+
+            <label for="price">Price (INR):</label>
+            <input type="number" id="price" name="price" value="30000" readonly required>            
+
+            <label for="description">Additional Details:</label>
+            <textarea id="description" name="description" placeholder="Write additional details like how you customize your machine" rows="5"></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+            <h4>After submission we'll reach soon.</h4>
+        </form>
+    </div>
+</body>
+</html>
