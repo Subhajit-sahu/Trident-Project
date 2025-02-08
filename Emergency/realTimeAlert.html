@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Alert</title>
+</head>
+<style>
+    /* alert.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f2f2f2, #d6e4f0);
+    text-align: center;
+    color: #333;
+}
+
+.alert-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.alert-box {
+    margin: 20px auto;
+    padding: 15px;
+    background: #ffebcc;
+    color: #855404;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .alert-container {
+        width: 90%;
+    }
+}
+
+</style>
+<body>
+
+    <div class="alert-container">
+        <h1>Real-Time Alert System</h1>
+        <p>Stay updated with instant alerts.</p>
+        
+        <div class="alert-box">
+            <p id="alert-message">No new alerts.</p>
+        </div>
+
+        <button onclick="generateAlert()">Simulate Alert</button>
+    </div>
+
+    <script>
+        // alert.js
+function generateAlert() {
+    const alertBox = document.getElementById("alert-message");
+    const alerts = [
+        "Fall detected! Immediate response required.",
+        "Minor movement detected. Monitoring...",
+        "All clear. No issues detected."
+    ];
+    
+    let randomAlert = alerts[Math.floor(Math.random() * alerts.length)];
+    alertBox.textContent = randomAlert;
+
+    // Flash animation
+    alertBox.style.animation = "none";
+    setTimeout(() => {
+        alertBox.style.animation = "fadeIn 1s ease-in-out";
+    }, 10);
+}
+
+    </script>
+</body>
+</html>

@@ -386,6 +386,7 @@ body {
 /* Video Section */
 .how-it-works{
     height: 400px;
+    margin-bottom: 40px;
 }
 
 .how-it-works .container video{
